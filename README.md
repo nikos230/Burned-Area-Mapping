@@ -8,11 +8,13 @@
 - Auto Saves NBR_PRE_FIRE.tiff, NBR_POST_FIRE.tiff
 - Auto saves NDVI_PRE_FIRE.tiff, NDVI_POST_FIRE.tiff
 - Auto Creates and Saves DNBR.tiff
+- Generates Bunred Area Smoothed Shapefile
+- Generates Burned Area Grading (Low, Moderate, High, Very High) in Raster and Vector form.
 
 
 ## How to Use
 - Open BurnedAreaBox.json and paste your AOI box that you copy from Sentinel Data Space
-- Open **burn-scar-mapping/configs/config.yaml** input start_DATE and end_DATE for searching, cloudCover and EPSG for output raster(s)
+- Open **configs/config.yaml** input fire_DATE which is ingnition date for searching, cloudCover and EPSG for output raster(s)
 - Run **main.py**
 
 ### Use it with Objects
