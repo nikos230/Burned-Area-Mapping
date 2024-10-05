@@ -28,7 +28,7 @@ class SearchSentinel:
             query={'eo:cloud_cover': {'lt': self.cloudCover}}
         )
 
-        # remoce images that are not fully in the bbox
+        # remove images that are not fully in the bbox
         filtered_items = []
         for item in stac_items.items():
             item_geom = geom.shape(item.geometry)

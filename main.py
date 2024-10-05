@@ -9,11 +9,11 @@ import os
 if __name__ == "__main__":
     
     # path to geojson file containing bounding box of burned area
-    with open('configs/FireMonitoring_OpenDataCube/BurnedAreaBox.json', 'r') as file:
+    with open('configs/BurnedAreaBox.json', 'r') as file:
         burnedAreaBox = json.load(file)
     file.close()
 
-    with open('configs/FireMonitoring_OpenDataCube/config_fire_monitor.yaml', 'r') as file_config:
+    with open('configs/config_fire_monitor.yaml', 'r') as file_config:
         config = yaml.load(file_config, yaml.FullLoader)
         Fire_start_Date = config['Fire_start_Date']
         cloudCover      = config['cloudCover']
@@ -44,15 +44,15 @@ if __name__ == "__main__":
                        Fire_Name)
     
     # save the post and pre fire auto selected images
-    #fire.save_tiff_rgb('post', outputFolder + 'post_fire_RGB.tiff')
-    #fire.save_tiff_rgb('pre', outputFolder + 'pre_fire_RGB.tiff')
+    #fire.save_tiff_rgb('post')
+    #fire.save_tiff_rgb('pre')
 
-    #fire.save_tiff_single('nbr_post', outputFolder + 'nbr_post.tiff')
-    #fire.save_tiff_single('nbr_pre', outputFolder + 'nbr_pre.tiff')
+    #fire.save_tiff_single('nbr_post')
+    #fire.save_tiff_single('nbr_pre')
 
     fire.save_tiff_single('dnbr')
     
-    fire.polygonize(0.2)
+    fire.polygonize(DNBR_Threshold)
 
     fire.classify()
 
