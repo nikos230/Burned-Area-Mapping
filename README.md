@@ -1,5 +1,5 @@
 # Burned Area Mapping from Sentinel 2 Images
-
+Given an AOI box and Fire Start Date this script can fully map a burned area within the (small) AOI box. It gets Sentinel 2 data from the OpenDataCube EarthSearch in form of netCDF Polygonizes the burned area given a threshold, smooth the polygon and fill in small holes (noise). Also it grades the burned area from DNBR in 4 categorys (Low, Moderate, High, Very High). The output Raster(s) and Vector(s) are reprojects in the EPSG of config file given as input.
 
 ## Features
 - Finds Sentinel 2 images from a given box (AOI) (BurnedAreaBox.json) using OpenDataCube
