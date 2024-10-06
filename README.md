@@ -1,14 +1,14 @@
-# Burned Area Monitor
-(from script FireMonitor.ipynb but added many stuff)
+# Burned Area Mapping from Sentinel 2 Images
+
 
 ## Features
-- Finds Sentinel 2 images from a given box (AOI) (BurnedAreaBox.json)
+- Finds Sentinel 2 images from a given box (AOI) (BurnedAreaBox.json) using OpenDataCube
 - Filters images with clouds, half images(where AOI is in 2 images and not in one)
 - Auto Selects Pre and Post Fire images
 - Auto Saves NBR_PRE_FIRE.tiff, NBR_POST_FIRE.tiff
 - Auto saves NDVI_PRE_FIRE.tiff, NDVI_POST_FIRE.tiff
 - Auto Creates and Saves DNBR.tiff
-- Generates Bunred Area Polygon Shapefile (remove small holes and uses gaussian smooth for the final polygon)
+- Generates Bunred Area Polygon Shapefile (removes small holes and uses gaussian smooth for the final polygon)
 - Generates Burned Area Grading (Low, Moderate, High, Very High) in Raster and Vector form.
 
 
