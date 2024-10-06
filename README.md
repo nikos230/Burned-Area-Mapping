@@ -14,30 +14,12 @@
 
 ## How to Use
 - Open BurnedAreaBox.json and paste your AOI box that you copy from Sentinel Data Space
-- Open **configs/config.yaml** input fire_DATE which is ingnition date for searching, cloudCover and EPSG for output raster(s)
+- Open **config_fire_monitor.yaml** and input :<br />
+```Fire_start_Date: '2024-07-10'``` <br />
+```Fire_Name: 'xios_fire'```<br />
+```EPSG: EPSG:32635```<br />
+```DNBR_Threshold: 0.1```<br />
+```cloudCover: 5```<br />
+```outputFolder: src/FireMonitoring_OpenDataCube/output/```<br />
 - Run **main.py**
 
-### Use it with Objects
-- Init fire object <br />
-```fire = FireMonitor(burnedAreaBox, start_DATE, end_DATE, cloudCover)``` <br /><br />
-- Save RGB image using 'post' or 'pre', output tiff name and prefered EPSG <br />
-```fire.save_tiff_rgb('post', 'output_name.tiff', output_EPSG)``` <br /><br />
-- Save a single band using its name (see below) or save nbr and ndvi using 'nbr_post' or 'nbr_pre' and 'ndvi_post' or 'ndvi_pre' and output tiff name and prefered EPSG <br />
-```fire.save_tiff_single('channel_name or nbr or ndvi' 'output_name.tiff', output_EPSG)``` <br /><br />
-- Plot nbr for all dates
-```fire.data.nbr.plot()```
-
-Sentinel 2 Band names<br />
-band 1 -><br />
-band 2 -> blue<br />
-band 3 -> green<br />
-band 4 -> red<br />
-band 5 -> redegde1<br />
-band 6 -> rededge2<br />
-band 7 -> rededge3<br />
-band 8 -> nir<br />
-band 8A -> nir08<br />
-band 9 -> nir09<br />
-band 10 -> <br />
-band 11 -> swir16<br />
-band 12 -> swir22<br />
