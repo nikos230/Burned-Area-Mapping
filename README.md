@@ -8,7 +8,7 @@
 - Auto Saves NBR_PRE_FIRE.tiff, NBR_POST_FIRE.tiff
 - Auto saves NDVI_PRE_FIRE.tiff, NDVI_POST_FIRE.tiff
 - Auto Creates and Saves DNBR.tiff
-- Generates Bunred Area Smoothed Shapefile
+- Generates Bunred Area Polygon Shapefile (remove small holes and uses gaussian smooth for the final polygon)
 - Generates Burned Area Grading (Low, Moderate, High, Very High) in Raster and Vector form.
 
 
@@ -20,6 +20,18 @@
 ```EPSG: EPSG:32635```&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Output EPSG of Raster and Vector files<br />
 ```DNBR_Threshold: 0.1```&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Threshold for burned pixels<br />
 ```cloudCover: 5```&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Change if no images and found<br />
-```outputFolder: output/```<br />
+```outputFolder: output/```&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Output folder for all files<br />
 - Run **main.py**
+
+## Output
+- DNBR.tiff output example (xios fire, 2024-07-10)
+![Alt text](https://github.com/nikos230/Burned-Area-Mapping/blob/main/screenshots/DNBR.jpg) <br />
+
+- Burned Area Polygon example (xios fire, 2024-07-10)
+![Alt text](https://github.com/nikos230/Burned-Area-Mapping/blob/main/screenshots/polygon.jpg) <br />
+
+- Burned Area Grading (Vector) example (xios fire, 2024-07-10)
+![Alt text](https://github.com/nikos230/Burned-Area-Mapping/blob/main/screenshots/classify.jpg)
+
+
 
