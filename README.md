@@ -4,7 +4,7 @@
 ## Features
 - Finds Sentinel 2 images from a given box (AOI) (BurnedAreaBox.json)
 - Filters images with clouds, half images(where AOI is in 2 images and not in one)
-- Auto Select Pre and Post Fire images
+- Auto Selects Pre and Post Fire images
 - Auto Saves NBR_PRE_FIRE.tiff, NBR_POST_FIRE.tiff
 - Auto saves NDVI_PRE_FIRE.tiff, NDVI_POST_FIRE.tiff
 - Auto Creates and Saves DNBR.tiff
@@ -31,7 +31,12 @@
 ![Alt text](https://github.com/nikos230/Burned-Area-Mapping/blob/main/screenshots/polygon.jpg) <br />
 
 - Burned Area Grading (Vector) example (xios fire, 2024-07-10)
-![Alt text](https://github.com/nikos230/Burned-Area-Mapping/blob/main/screenshots/classify.jpg)
+![Alt text](https://github.com/nikos230/Burned-Area-Mapping/blob/main/screenshots/classify.jpg) <br />
+
+- Burned Area Grading (Raster) example (xios fire, 2024-07-10)
+![Alt text](https://github.com/nikos230/Burned-Area-Mapping/blob/main/screenshots/calssify_png.jpg)
+
+
 
 
 
